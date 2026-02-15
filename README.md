@@ -69,7 +69,6 @@ Relationships:
 4. source .venv/bin/activate
 5. pip install -r requirements.txt
 '''Next Portion is in SQL'''
-```sql 
 6. CREATE DATABASE school;
 7. USE school;
 8. SOURCE DATABASE.sql;
