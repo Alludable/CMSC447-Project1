@@ -1,0 +1,26 @@
+# created by virtualenv automatically
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+CACHEDIR.TAG
+
+venv/
+.venv/
+env/
+ENV/
+bin/
+lib/
+include/
+pyvenv.cfg
+
+instance/
+.webassets-cache/
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+*.log

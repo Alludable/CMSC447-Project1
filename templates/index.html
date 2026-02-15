@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link href="/static/styles.css" rel="stylesheet"></link>
+    <script src="/static/script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="parent_div">
+        <h1>Welcome to the Management System</h1>
+        <button id="fetchStudents">Load Student Data</button>
+        <div id="dataTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Credits Earned</th>
+                    </tr>
+                </thead>
+            <tbody id="students-table-body"></tbody>
+            </table>
+        </div>
+        <div class="actions" id="actions">
+            <button id="addBtnStudent">Add Student</button>
+            <button id="updateBtnStudent" disabled>Update Student</button>
+            <button id="deleteBtnStudent" disabled>Delete Student</button>
+        </div>
+        <div id="deleteModalStudent" hidden>
+            <input id="deleteIdInputStudent" type="number" placeholder="Enter Row ID">
+            <button id="confirmDeleteBtnStudent">Confirm Delete</button>
+            <button id="cancelDeleteBtnStudent">Cancel</button>
+        </div>
+        <div id="addModalStudent" hidden>
+            <input id="addNameInputStudent" type="text" placeholder="Enter Student Name">
+            <input id="addCreditsInputStudent" type="number" placeholder="Enter Credits Earned">
+            <button id="confirmAddBtnStudent">Confirm Add</button>
+            <button id="cancelAddBtnStudent">Cancel</button>
+        </div>
+        <div id="updateModalStudent" hidden>
+            <input id="updateRowStudent" type="number" placeholder="Enter ID of Row to Update">
+            <input id="updateNameInputStudent" type="text" placeholder="Enter New Student Name">
+            <input id="updateCreditsInputStudent" type="number" placeholder="Enter New Credits Earned">
+            <button id="confirmUpdateBtnStudent">Confirm Update</button>
+            <button id="cancelUpdateBtnStudent">Cancel</button>
+        </div>
+    </div>
+
+    <div class="parent_div">
+        <button id="fetchInstructors">Load Instructor Data</button>
+        <div id="dataTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Instructor ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+            <tbody id="instructors-table-body"></tbody>
+            </table>
+        </div>
+        <div class="actions" id="actions">
+            <button id="addBtnInstructor">Add Instructor</button>
+            <button id="updateBtnInstructor" disabled>Update Instructor</button>
+            <button id="deleteBtnInstructor" disabled>Delete Instructor</button>
+        </div>
+        <div id="deleteModalInstructor" hidden>
+            <input id="deleteIdInputInstructor" type="number" placeholder="Enter Row ID">
+            <button id="confirmDeleteBtnInstructor">Confirm Delete</button>
+            <button id="cancelDeleteBtnInstructor">Cancel</button>
+        </div>
+        <div id="addModalInstructor" hidden>
+            <input id="addNameInputInstructor" type="text" placeholder="Enter Instructor Name">
+            <input id="addDepartmentInputInstructor" type="text" placeholder="Enter Department Name">
+            <button id="confirmAddBtnInstructor">Confirm Add</button>
+            <button id="cancelAddBtnInstructor">Cancel</button>
+        </div>
+        <div id="updateModalInstructor" hidden>
+            <input id="updateRowInstructor" type="number" placeholder="Enter ID of Row to Update">
+            <input id="updateNameInputInstructor" type="text" placeholder="Enter New Instructor Name">
+            <input id="updateDepartmentInputInstructor" type="text" placeholder="Enter New Department Name">
+            <button id="confirmUpdateBtnInstructor">Confirm Update</button>
+            <button id="cancelUpdateBtnInstructor">Cancel</button>
+        </div>
+    </div>
+
+    <div class="parent_div">
+        <button id="fetchCourses">Load Course Data</button>
+        <div id="dataTable">
+            <table>
+            <thead>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Title</th>
+                    <th>Instructor ID</th>
+                    <th>Credits</th>
+                </tr>
+            </thead>
+            <tbody id="courses-table-body"></tbody>
+        </table>
+        </div>
+        <div class="actions" id="actions">
+            <button id="addBtnCourse">Add Course</button>
+            <button id="updateBtnCourse" disabled>Update Course</button>
+            <button id="deleteBtnCourse" disabled>Delete Course</button>
+        </div>
+        <div id="deleteModalCourse" hidden>
+            <input id="deleteIdInputCourse" type="number" placeholder="Enter Row ID">
+            <button id="confirmDeleteBtnCourse">Confirm Delete</button>
+            <button id="cancelDeleteBtnCourse">Cancel</button>
+        </div>
+        <div id="addModalCourse" hidden>
+            <input id="addNameInputCourse" type="text" placeholder="Enter Course Name">
+            <input id="addInstructorIdInputCourse" type="number" placeholder="Enter Instructor ID">
+            <input id="addCreditsInputCourse" type="number" placeholder="Enter Credits Earned">
+            <button id="confirmAddBtnCourse">Confirm Add</button>
+            <button id="cancelAddBtnCourse">Cancel</button>
+        </div>
+        <div id="updateModalCourse" hidden>
+            <input id="updateRowCourse" type="number" placeholder="Enter ID of Row to Update">
+            <input id="updateNameInputCourse" type="text" placeholder="Enter New Course Name">
+            <input id="updateCreditsInputCourse" type="number" placeholder="Enter New Credit Hours">
+            <input id="updateInstructorIdInputCourse" type="number" placeholder="Enter New Instructor ID">
+            <button id="confirmUpdateBtnCourse">Confirm Update</button>
+            <button id="cancelUpdateBtnCourse">Cancel</button>
+        </div>
+    </div>
+
+    <div class="parent_div">
+        <button id="fetchEnrollments">Load Enrollment Data</button>
+        <div id="dataTable">
+            <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Course ID</th>
+                    <th>Course Title</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody id="enrollments-table-body"></tbody>
+        </table>
+        </div>
+        <div class="actions" id="actions">
+            <button id="addBtnEnrollment">Add Enrollment</button>
+            <button id="updateBtnEnrollment" disabled>Update Enrollment</button>
+            <button id="deleteBtnEnrollment" disabled>Delete Enrollment</button>
+        </div>
+        <div id="deleteModalEnrollment" hidden>
+            <input id="deleteStudentIdInputEnrollment" type="number" placeholder="Enter Student ID">
+            <input id="deleteCourseIdInputEnrollment" type="number" placeholder="Enter Course ID">
+            <button id="confirmDeleteBtnEnrollment">Confirm Delete</button>
+            <button id="cancelDeleteBtnEnrollment">Cancel</button>
+        </div>
+        <div id="addModalEnrollment" hidden>
+            <input id="addStudentIdInputEnrollment" type="number" placeholder="Enter Student ID">
+            <input id="addCourseIdInputEnrollment" type="number" placeholder="Enter Course ID">
+            <input id="addGradeInputEnrollment" type="text" placeholder="Enter Grade">
+            <button id="confirmAddBtnEnrollment">Confirm Add</button>
+            <button id="cancelAddBtnEnrollment">Cancel</button>
+        </div>
+        <div id="updateModalEnrollment" hidden>
+            <input id="updateStudentIdInputEnrollment" type="number" placeholder="Enter Student ID">
+            <input id="updateCourseIdInputEnrollment" type="number" placeholder="Enter Course ID">
+            <input id="updateGradeInputEnrollment" type="text" placeholder="Enter New Grade">
+            <button id="confirmUpdateBtnEnrollment">Confirm Update</button>
+            <button id="cancelUpdateBtnEnrollment">Cancel</button>
+        </div>
+    </div>
+
+</body>
+</html>
