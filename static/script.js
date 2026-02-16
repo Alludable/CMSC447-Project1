@@ -660,6 +660,7 @@ async function updateStudent(id, updates) {
     }
 
     await fetchStudents();
+    await fetchEnrollments();
 }
 
 async function updateInstructor(id, updates) {
@@ -697,6 +698,7 @@ async function updateCourse(id, updates) {
     }
 
     await fetchCourses();
+    await fetchEnrollments();
 }
 
 async function updateEnrollment(student_id, course_id, updates) {
